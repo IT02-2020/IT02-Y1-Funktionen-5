@@ -74,7 +74,7 @@
             this.resultListView.HideSelection = false;
             this.resultListView.Location = new System.Drawing.Point(49, 85);
             this.resultListView.Name = "resultListView";
-            this.resultListView.Size = new System.Drawing.Size(357, 208);
+            this.resultListView.Size = new System.Drawing.Size(357, 103);
             this.resultListView.TabIndex = 4;
             this.resultListView.UseCompatibleStateImageBehavior = false;
             // 
@@ -82,14 +82,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 305);
+            this.ClientSize = new System.Drawing.Size(443, 215);
             this.Controls.Add(this.resultListView);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.yTextBox);
             this.Controls.Add(this.eingabeLabel);
             this.Controls.Add(this.xTextBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Funktionen 5";
             this.ResumeLayout(false);
             this.PerformLayout();
 

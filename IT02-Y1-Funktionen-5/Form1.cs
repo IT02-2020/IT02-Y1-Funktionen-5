@@ -85,15 +85,26 @@ namespace IT02_Y1_Funktionen_5
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            if (resultListView.Items.Count > 0)
+            {
+                resultListView.Items.Clear();
+            }
 
             if (xTextBox.TextLength > 0 && yTextBox.TextLength > 0)
             {
                 if (int.TryParse(xTextBox.Text, out int numOne) && int.TryParse(yTextBox.Text, out int numTwo))
                 {
-                    resultListView.Items.Add($"{numOne} + {numTwo} = {Add(numOne, numTwo)}");
-                    resultListView.Items.Add($"{numOne} - {numTwo} = {Sub(numOne, numTwo)}");
-                    resultListView.Items.Add($"{numOne} * {numTwo} = {Mul(numOne, numTwo)}");
-                    resultListView.Items.Add($"{numOne} / {numTwo} = {Div(numOne, numTwo)}");
+                    if (numOne >= 0 && numTwo >= 0)
+                    {
+                        resultListView.Items.Add($"{numOne} + {numTwo} = {Add(numOne, numTwo)}");
+                        resultListView.Items.Add($"{numOne} - {numTwo} = {Sub(numOne, numTwo)}");
+                        resultListView.Items.Add($"{numOne} * {numTwo} = {Mul(numOne, numTwo)}");
+                        if (numOne > 0 && numTwo > 0)
+                        {
+                            resultListView.Items.Add($"{numOne} / {numTwo} = {Div(numOne, numTwo)}");
+                        }
+                    }
+  
                 }
             }
 
